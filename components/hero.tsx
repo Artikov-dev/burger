@@ -15,10 +15,9 @@ export default function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative min-h-[90vh] max-h-screen w-full flex items-center justify-center overflow-hidden bg-[url('/back.png')] bg-cover bg-center bg-no-repeat z-0"
-
+      className="relative h-[90vh] w-full flex items-center justify-center overflow-hidden bg-[url('/back.png')] bg-cover bg-center bg-no-repeat z-0"
     >
-      <div className="container-custom h-full flex items-center  px-4 sm:px-6 relative z-10">
+      <div className="container-custom h-full flex items-center px-4 sm:px-6 relative z-10">
         <motion.div
           className="flex flex-col items-start justify-center w-full max-w-[600px] text-center sm:text-left z-20"
           initial={{ opacity: 0, x: -50 }}
