@@ -79,8 +79,7 @@ export default function Navigation() {
   ]
 
   return (
-<header className="relative w-full text-white">
-
+    <header className="relative w-full h-[657px] bg-[url('/placeholder.svg?height=657&width=1200')] bg-cover bg-center bg-no-repeat text-white">
       {/* Desktop Navigation */}
       <motion.nav
         className={`hidden md:flex justify-between items-center w-full p-5 ${isScrolled ? "fixed top-0 left-0 z-50 bg-black/80 backdrop-blur-sm transition-all duration-300" : "absolute top-0 left-0 z-10 shadow-[inset_0px_50px_50px_-10px_rgba(0,0,0,1),inset_0px_100px_100px_-50px_rgba(0,0,0,0.5),inset_0px_150px_150px_-100px_rgba(0,0,0,0.2)]"}`}
@@ -147,7 +146,7 @@ export default function Navigation() {
                       type="button"
                       variant="ghost"
                       size="icon"
-                      onClick={() => setIsS earchOpen(false)}
+                      onClick={() => setIsSearchOpen(false)}
                       aria-label="Close search"
                     >
                       <X className="h-4 w-4 text-white" aria-hidden="true" />
