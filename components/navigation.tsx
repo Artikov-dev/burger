@@ -100,11 +100,7 @@ export default function Navigation() {
             </motion.button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-black/90 text-white">
-            <div className="flex justify-end">
-              <Button variant="ghost" size="icon" className="text-white" onClick={() => setIsSearchOpen(false)}>
-                <X size={24} />
-              </Button>
-            </div>
+           
             <nav className="flex flex-col space-y-6 mt-8">
               {["Home", "Menu", "Chefs", "Contact"].map((item, i) => (
                 <motion.div key={item} initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: i * 0.1 }}>
