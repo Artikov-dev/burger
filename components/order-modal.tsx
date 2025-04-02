@@ -67,6 +67,10 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
       newErrors.quantity = "Please select a valid quantity"
     }
 
+    if (!formData.specialInstructions) {
+      newErrors.specialInstructions = "Please enter any special instructions"
+    }
+
     if (!formData.size) {
       newErrors.size = "Please select a size"
     }

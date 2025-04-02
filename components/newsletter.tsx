@@ -192,7 +192,7 @@ export default function Newsletter() {
 
         {}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(5)].map((_, i) => (
+          {/* {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute rounded-full bg-[#E63946] opacity-10"
@@ -215,7 +215,7 @@ export default function Newsletter() {
                 delay: Math.random() * 2,
               }}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
