@@ -52,14 +52,14 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Business Burger | Mazali Gourmet Burgerlar",
-    description:
-      "Cheeseburger, double burger, tovuqli burger, baliqli burger, achchiq burger, BBQ burger, veg burger va boshqa mazali burgerlar Business Burger menyusida!",
-    images: ["/twitter-image.jpg"],
-    creator: "@businessburger",
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: "Business Burger | Mazali Gourmet Burgerlar",
+  //   description:
+  //     "Cheeseburger, double burger, tovuqli burger, baliqli burger, achchiq burger, BBQ burger, veg burger va boshqa mazali burgerlar Business Burger menyusida!",
+  //   images: ["https://burger-mqqo.vercel.app/twitter-image.jpg"],
+  //   creator: "@businessburger",
+  // },
   robots: {
     index: true,
     follow: true,

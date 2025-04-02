@@ -37,7 +37,7 @@ export default function Navigation() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black/80 backdrop-blur-lg">
-      <nav className="container-custom flex justify-between items-center py-4">
+      <nav className="container-custom flex justify-between items-center py-4 px-0.5!">
         {/* Logo */}
         <motion.div className="flex items-center text-2xl font-bold text-white" whileHover={{ scale: 1.05 }}>
           <Burger className="mr-2 text-white" size={30} aria-hidden="true" />

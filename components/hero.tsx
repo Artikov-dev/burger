@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative h-[90vh] w-full flex items-center justify-center overflow-hidden bg-[url('/back.png')] bg-cover bg-center bg-no-repeat z-0"
+      className="relative h-[90dvh] w-full flex items-center justify-center overflow-hidden bg-[url('/back.png')] bg-cover bg-center bg-no-repeat z-0 h-[100dvh] m-h-[1080px]"
     >
       <div className="container-custom h-full flex items-center px-4 sm:px-6 relative z-10">
         <motion.div

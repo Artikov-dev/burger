@@ -1,9 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Card, CardContent } from "@/components/ui/card"
 import { useMediaQuery } from "@/hooks/use-media-query"
 
 interface Chef {
@@ -13,7 +11,7 @@ interface Chef {
   image: string
 }
 
-export default function ChefsSection() {
+export default function ChefsCarousel() {
   const chefs: Chef[] = [
     {
       id: 1,
@@ -33,7 +31,6 @@ export default function ChefsSection() {
       role: "Co-Founder",
       image: "/jiga-qizi.png",
     },
-
     {
       id: 4,
       name: "GORDON RAMSAY",
@@ -55,139 +52,60 @@ export default function ChefsSection() {
   ]
 
   const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1023px)")
-  const isMobile = useMediaQuery("(max-width: 767px)")
+  const isDesktop = useMediaQuery("(min-width: 1024px)")
 
-  const [startIndex, setStartIndex] = useState(0)
-  const [chefsPerView, setChefsPerView] = useState(3)
-
-  useEffect(() => {
-    if (isMobile) {
-      setChefsPerView(1)
-    } else if (isTablet) {
-      setChefsPerView(2)
-    } else {
-      setChefsPerView(3)
-    }
-  }, [isMobile, isTablet])
-
-  const visibleChefs = chefs.slice(startIndex, startIndex + chefsPerView)
-
-  const handlePrev = () => {
-    setStartIndex(Math.max(0, startIndex - 1))
-  }
-
-  const handleNext = () => {
-    setStartIndex(Math.min(chefs.length - chefsPerView, startIndex + 1))
-  }
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  }
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    show: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 300 } },
-  }
+  // Determine how many items to show based on screen size
+  const itemsPerView = isDesktop ? 3 : isTablet ? 2 : 1
 
   return (
     <section aria-labelledby="chefs-heading" className="py-12 bg-[#f8f1e4]">
-      <div className="container-custom">
-        <motion.h2
+      <div className="container-custom max-w-6xl mx-auto px-4">
+        <h2
           id="chefs-heading"
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F54B3B] mb-5 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
         >
-          Our Chef
-        </motion.h2>
+          Our Chefs
+        </h2>
 
-        <motion.p
-          className="text-lg md:text-xl text-[#F54B3B] mb-14 max-w-[464px] px-4 mx-auto text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
+        <p className="text-lg md:text-xl text-[#F54B3B] mb-14 max-w-[464px] px-4 mx-auto text-center">
           Meet the talented culinary experts behind our delicious burgers. Our chefs bring years of experience and
           passion to every dish.
-        </motion.p>
+        </p>
 
-        <div className="relative w-full max-w-6xl mx-auto px-4">
-          <motion.div
-            className="flex overflow-hidden justify-around gap-5"
-            aria-live="polite"
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            {visibleChefs.map((chef) => (
-              <motion.div
-                key={chef.id}
-                className="flex flex-col items-center gap-5 w-full max-w-[331px]"
-                variants={item}
-                whileHover={{ y: -10 }}
-              >
-                <motion.img
-                  src={chef.image || "/placeholder.svg"}
-                  alt={`${chef.name} - ${chef.role} at Burger Business`}
-                  className="w-[180px] h-[180px] rounded-full object-cover"
-                  whileHover={{ scale: 1.1, boxShadow: "0px 10px 20px rgba(245, 75, 59, 0.3)" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                />
-                <motion.h3
-                  className="text-2xl md:text-3xl font-bold text-[#F54B3B] uppercase"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  {chef.name}
-                </motion.h3>
-                <motion.p
-                  className="text-sm md:text-base font-semibold text-[#F54B3B] mb-0"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.4 }}
-                >
-                  {chef.role}
-                </motion.p>
-              </motion.div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {chefs.map((chef) => (
+              <CarouselItem key={chef.id} className={`basis-full md:basis-1/2 lg:basis-1/3`}>
+                <div className="p-2">
+                  <Card className="border-none bg-transparent shadow-none">
+                    <CardContent className="flex flex-col items-center gap-5 p-6">
+                      <img
+                        src={chef.image || "/placeholder.svg"}
+                        alt={`${chef.name} - ${chef.role} at Burger Business`}
+                        className="w-[180px] h-[180px] rounded-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                      <h3 className="text-2xl md:text-3xl font-bold text-[#F54B3B] uppercase">
+                        {chef.name}
+                      </h3>
+                      <p className="text-sm md:text-base font-semibold text-[#F54B3B] mb-0">
+                        {chef.role}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
             ))}
-          </motion.div>
-
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-            <Button
-              onClick={handlePrev}
-              disabled={startIndex === 0}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#F54B3B]/80 hover:bg-[#F54B3B] text-white rounded-full h-10 w-10 p-0"
-              aria-label="Previous chef"
-            >
-              <ChevronLeft className="h-6 w-6" />
-              <span className="sr-only">Previous chef</span>
-            </Button>
-
-            <Button
-              onClick={handleNext}
-              disabled={startIndex >= chefs.length - chefsPerView}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#F54B3B]/80 hover:bg-[#F54B3B] text-white rounded-full h-10 w-10 p-0"
-              aria-label="Next chef"
-            >
-              <ChevronRight className="h-6 w-6" />
-              <span className="sr-only">Next chef</span>
-            </Button>
-          </motion.div>
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="left-2 bg-[#F54B3B]/80 hover:bg-[#F54B3B] text-white hover:text-white" />
+          <CarouselNext className="right-2 bg-[#F54B3B]/80 hover:bg-[#F54B3B] text-white hover:text-white" />
+        </Carousel>
       </div>
     </section>
   )
 }
-
