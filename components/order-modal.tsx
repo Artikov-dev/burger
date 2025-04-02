@@ -354,11 +354,12 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
                       value={formData.address}
                       onChange={(e) => handleChange("address", e.target.value)}
                       className={`col-span-3 ${errors.address ? "border-red-500" : ""}`}
+
                     />
                     {errors.address && (
                       <div className="col-start-2 col-span-3 text-red-500 text-sm mt-1">{errors.address}</div>
                     )}
-                  </div>
+                  </div>  
 
                   <div className="grid grid-cols-4 items-center gap-4">
                     <div className="col-start-2 col-span-3 flex items-center space-x-2">

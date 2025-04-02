@@ -190,7 +190,7 @@ export default function Newsletter() {
           )}
         </AnimatePresence>
 
-        {/* Animated background elements */}
+        {}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           {[...Array(5)].map((_, i) => (
             <motion.div

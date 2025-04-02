@@ -9,13 +9,24 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Burger Business | Delicious Gourmet Burgers",
+  title: "Business Burger | Mazali Gourmet Burgerlar",
   description:
-    "Enjoy premium gourmet burgers made with fresh ingredients. Order online for delivery or pickup. Special promotions and cashback offers available.",
-  keywords: ["burger", "gourmet burger", "food delivery", "restaurant", "fast food", "burger delivery"],
-  authors: [{ name: "Burger Business" }],
-  creator: "Burger Business",
-  publisher: "Burger Business",
+    "Cheeseburger, double burger, tovuqli burger, baliqli burger, achchiq burger, BBQ burger, veg burger va boshqa mazali burgerlar Business Burger menyusida!",
+  keywords: [
+    "cheeseburger",
+    "double burger",
+    "tovuq burger",
+    "baliqli burger",
+    "achchiq burger",
+    "BBQ burger",
+    "veg burger",
+    "klassik burger",
+    "Angus burger",
+    "smash burger",
+  ],
+  authors: [{ name: "Business Burger" }],
+  creator: "Business Burger",
+  publisher: "Business Burger",
   formatDetection: {
     telephone: true,
     email: true,
@@ -29,24 +40,26 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.example.com",
-    title: "Burger Business | Delicious Gourmet Burgers",
-    description: "Enjoy premium gourmet burgers made with fresh ingredients. Order online for delivery or pickup.",
-    siteName: "Burger Business",
+    title: "Business Burger | Mazali Gourmet Burgerlar",
+    description:
+      "Cheeseburger, double burger, tovuqli burger, baliqli burger, achchiq burger, BBQ burger, veg burger va boshqa mazali burgerlar Business Burger menyusida!",
+    siteName: "Business Burger",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Burger Business - Delicious Gourmet Burgers",
+        alt: "Business Burger - Mazali Gourmet Burgerlar",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Burger Business | Delicious Gourmet Burgers",
-    description: "Enjoy premium gourmet burgers made with fresh ingredients. Order online for delivery or pickup.",
+    title: "Business Burger | Mazali Gourmet Burgerlar",
+    description:
+      "Cheeseburger, double burger, tovuqli burger, baliqli burger, achchiq burger, BBQ burger, veg burger va boshqa mazali burgerlar Business Burger menyusida!",
     images: ["/twitter-image.jpg"],
-    creator: "@burgerbusiness",
+    creator: "@businessburger",
   },
   robots: {
     index: true,
@@ -84,4 +97,3 @@ export default function RootLayout({
     </html>
   )
 }
-
