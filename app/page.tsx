@@ -15,15 +15,15 @@ export default function Home() {
       <Hero />
       <ChefsSection />
       <BurgerCard
-        title="Best Burger"
-        description="Our signature burger made with premium Angus beef, fresh vegetables, and our secret sauce. A must-try for burger lovers!"
+        title="Mashhur Burger"
+        description="Bizning imzo burgerimiz, premium Angus mol go‘shti, yangi sabzavotlar va maxfiy sous bilan tayyorlangan. Burger sevuvchilar uchun albatta tatib ko‘rish kerak!"
         imageSrc="/burger1.png"
         bgColor="bg-[#E63946]"
-        buttonColor="bg-white text-[#E63946]"
+        buttonColor="bg-[#E63946] text-white border-[1px] border-white"
       />
       <BurgerCard
-        title="Big Burger"
-        description="Double patty burger with melted cheese, crispy bacon, and all the fixings. Perfect for those with a big appetite!"
+        title="Katta Burger"
+        description="Ikkita kotletli burger, eritilgan pishloq, qarsildoq bekon va barcha qo‘shimchalar bilan. Katta ishtaha uchun ideal tanlov!"
         imageSrc="/burger1.png"
         bgColor="bg-[#F4E1C1]"
         buttonColor="bg-[#E63946] text-white"

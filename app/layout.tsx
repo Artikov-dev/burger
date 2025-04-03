@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     "Angus burger",
     "smash burger",
   ],
-  authors: [{ name: "Business Burger" }],
-  creator: "Business Burger",
-  publisher: "Business Burger",
+  authors: [{ name: "Ozbekona Burger" }],
+  creator: "Ozbekona Burger",
+  publisher: "Ozbekona Burger",
   formatDetection: {
     telephone: true,
     email: true,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: "https://www.example.com",
     title: "Business Burger | Mazali Gourmet Burgerlar",
     description:
-      "Cheeseburger, double burger, tovuqli burger, baliqli burger, achchiq burger, BBQ burger, veg burger va boshqa mazali burgerlar Business Burger menyusida!",
+      "Cheeseburger, double burger, tovuqli burger, baliqli burger, achchiq burger, BBQ burger, veg burger va boshqa mazali burgerlar Ozbekona Burger menyusida!",
     siteName: "Business Burger",
     images: [
       {
