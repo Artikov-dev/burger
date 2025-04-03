@@ -38,7 +38,7 @@ export default function BurgerCard({
     >
       <div className="container-custom">
         <motion.div
-          className={`flex ${reverse ? "flex-col-reverse md:flex-row-reverse" : "flex-col md:flex-row"} items-center py-12 gap-6 md:gap-12`}
+          className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center py-12 gap-6 md:gap-12`}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -112,4 +112,3 @@ export default function BurgerCard({
     </section>
   )
 }
-
