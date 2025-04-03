@@ -15,18 +15,18 @@ export default function ChefsCarousel() {
   const chefs: Chef[] = [
     {
       id: 1,
-      name: "Tolqinov  Botir",
+      name: "Artikov Rozimuhammad",
       role: "Oshpaz Yordamchisi",
+      image: "/photo-gogle-meet.jpg",
+    },
+    {
+      id: 3,
+      name: "Tolqinov Botir",
+      role: "Girgitton",
       image: "/jigaa.png",
     },
     {
       id: 2,
-      name: "Abdusalomova  Mashura",
-      role: "Girgitton",
-      image: "/jiga-qizi.png",
-    },
-    {
-      id: 3,
       name: "Nodira Kurbanova",
       role: "Girgitton",
       image: "/jiga-qizi.png",
@@ -35,13 +35,13 @@ export default function ChefsCarousel() {
       id: 4,
       name: "Isoyeva  Sultonposhsho",
       role: "chef",
-      image: "/jiga-qizi.png",
+      image: "/isoyeva.png",
     },
     {
       id: 5,
-      name: "Tolqinova  Aliya",
+      name: "Ashurova  Sabina ",
       role: "Oshpaz yordamchisi",
-      image: "/jiga-qizi.png",
+      image: "/sabina.png",
     },
     {
       id: 6,

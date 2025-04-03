@@ -40,7 +40,7 @@ export default function Navigation() {
         {/* Logo */}
         <div className="flex items-center text-2xl font-bold text-white">
           <Burger className="mr-2 text-white" size={30} aria-hidden="true" />
-          <span>O'zbekona Burgerlar</span>
+          <span className="hidden lg:flex">O'zbekona Burgerlar</span>
         </div>
 
         {/* Desktop Menu */}
