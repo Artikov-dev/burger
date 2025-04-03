@@ -20,21 +20,21 @@ export default function Packages() {
   const packages: Package[] = [
     {
       id: 1,
-      title: "PACKAGE I",
-      price: "$10.00",
-      description: "Single burger with fries and a drink. Perfect for a quick meal.",
+      title: "PAKET I",
+      price: "100.000 sum",
+      description: "Bitta burger, kartoshka va ichimlik. Tez va to'liq ovqatlanish uchun ideal variant.",
     },
     {
       id: 2,
-      title: "PACKAGE II",
-      price: "$20.00",
-      description: "Two burgers with fries, onion rings, and two drinks. Great for sharing.",
+      title: "PAKET II",
+      price: "300.000 sum",
+      description: "Ikki burger, kartoshka, piyoz halqalari va ikki ichimlik. Do'stlar bilan baham ko'rish uchun juda yaxshi.",
     },
     {
       id: 3,
-      title: "PACKAGE III",
-      price: "$30.00",
-      description: "Family meal with four burgers, large fries, onion rings, and four drinks.",
+      title: "PAKET III",
+      price: "200.000 sum",
+      description: "Oilaviy to'plam: to'rt burger, katta kartoshka, piyoz halqalari va to'rt ichimlik.",
     },
   ]
 
@@ -54,7 +54,7 @@ export default function Packages() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Popular Package
+          Mashhur Paketlar
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,7 +78,7 @@ export default function Packages() {
                   className="bg-[#E63946] hover:bg-[#d12836] text-white rounded-full px-10 py-4 uppercase font-bold"
                   aria-label={`Order ${pkg.title} for ${pkg.price}`}
                 >
-                  ORDER NOW
+                  Buyurtma berish
                 </Button>
               </motion.div>
             </motion.div>

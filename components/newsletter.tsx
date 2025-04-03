@@ -22,7 +22,7 @@ export default function Newsletter() {
     if (!email.trim()) {
       toast({
         title: "Error",
-        description: "Please enter your email address.",
+        description: "Iltimos, elektron pochta manzilingizni kiriting.",
         variant: "destructive",
       })
       return
@@ -31,7 +31,7 @@ export default function Newsletter() {
     if (!/^\S+@\S+\.\S+$/.test(email)) {
       toast({
         title: "Error",
-        description: "Please enter a valid email address.",
+        description: "Iltimos, to‘g‘ri elektron pochta manzilingizni kiriting.",
         variant: "destructive",
       })
       return
@@ -40,7 +40,7 @@ export default function Newsletter() {
     if (!phone.trim()) {
       toast({
         title: "Error",
-        description: "Please enter your phone number for SMS notifications.",
+        description: "SMS bildirishnomalari uchun telefon raqamingizni kiriting.",
         variant: "destructive",
       })
       return
@@ -53,13 +53,13 @@ export default function Newsletter() {
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
       // Simulate SMS notification
-      console.log(`SMS sent to ${phone}: Thank you for subscribing to Burger Business updates!`)
+      console.log(`SMS yuborildi ${phone}: Burger Business yangiliklariga obuna bo‘lgansiz! Rahmat!`)
 
       setIsSuccess(true)
 
       toast({
-        title: "Success!",
-        description: `Thank you for subscribing! We've sent a confirmation to ${email} and an SMS to your phone.`,
+        title: "Muvaffaqiyat!",
+        description: `Obuna bo‘lish uchun rahmat! Biz ${email} manzilingizga tasdiqlash xabarini va telefoningizga SMS yubordik.`,
       })
 
       // Reset form after 3 seconds
@@ -89,13 +89,13 @@ export default function Newsletter() {
           viewport={{ once: true }}
         >
           <h2 id="newsletter-heading" className="text-3xl md:text-4xl font-bold text-[#E63946] mb-4">
-            Don't miss <span className="font-bold">Our Update</span>
+     <span className="font-bold">Yangilanishlar</span>
           </h2>
           <p className="text-lg text-[#E63946] mb-2">
-            Subscribe to our newsletter to receive updates on new menu items, promotions, and events.
+          Yangi menyu mahsulotlari, aksiyalar va tadbirlar haqida yangilanishlarni olish uchun axborot byulletenimizga obuna bo'ling.
           </p>
           <p className="text-lg text-[#E63946] mb-6">
-            Be the first to know about our special offers and exclusive deals via email and SMS.
+          Maxsus takliflar va eksklyuziv chegirmalar haqida birinchi bo'lib xabar toping, email va SMS orqali.
           </p>
         </motion.div>
 
@@ -122,7 +122,7 @@ export default function Newsletter() {
                 transition={{ delay: 0.3 }}
                 className="text-xl font-medium text-[#E63946]"
               >
-                Thank you for subscribing!
+          Obuna  bolganiz uchun rahmat!
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ export default function Newsletter() {
                 className="flex items-center justify-center mt-2 text-[#E63946]"
               >
                 <Bell className="mr-2" size={16} />
-                <p>SMS notification sent to your phone</p>
+                <p>SMS bildirishnomasi sizning telefoningizga yuborildi</p>
               </motion.div>
             </motion.div>
           ) : (
@@ -146,27 +146,27 @@ export default function Newsletter() {
               transition={{ duration: 0.3 }}
             >
               <span id="newsletter-form-heading" className="sr-only">
-                Subscribe to our newsletter
+              Yangiliklarimizga obuna bo'ling!
               </span>
               <div className="w-full space-y-4">
                 <Input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder="Email manzilingiz"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full h-12"
                   disabled={isSubmitting}
-                  aria-label="Email address"
+                  aria-label="Email adresizni kiriting"
                   aria-required="true"
                 />
                 <Input
                   type="tel"
-                  placeholder="Your Phone Number (for SMS)"
+                  placeholder="Telefon raqamingiz (SMS uchun)"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full h-12"
                   disabled={isSubmitting}
-                  aria-label="Phone number for SMS notifications"
+                  aria-label="SMS xabarnomalar uchun telefon raqami"
                   aria-required="true"
                 />
               </div>
@@ -174,7 +174,7 @@ export default function Newsletter() {
                 type="submit"
                 className="bg-[#E63946] hover:bg-[#d12836] text-white w-full md:w-auto h-12"
                 disabled={isSubmitting}
-                aria-label="Subscribe to newsletter"
+                aria-label="Yangiliklar byulleteniga obuna bo'ling"
               >
                 {isSubmitting ? (
                   <motion.div
@@ -183,7 +183,7 @@ export default function Newsletter() {
                     className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                   />
                 ) : (
-                  "SUBSCRIBE"
+                  "Obuna bo'ling"
                 )}
               </Button>
             </motion.form>

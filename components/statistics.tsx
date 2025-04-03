@@ -62,7 +62,7 @@ export default function Statistics() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Statistics
+            Bizning statistika
           </motion.h2>
 
           <motion.p
@@ -72,7 +72,7 @@ export default function Statistics() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Our growth and reach across the globe. We're proud to serve thousands of customers in multiple countries.
+Dunyodagi o'sishimiz va keng tarqalishimiz. Biz bir nechta mamlakatlarda minglab mijozlarga xizmat ko'rsatishimizdan faxrlanamiz.
           </motion.p>
 
           <div className="flex flex-col md:flex-row justify-evenly items-center gap-10 w-full">
@@ -84,7 +84,7 @@ export default function Statistics() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)" }}
             >
-              <span aria-label="7 thousand customers">{Math.round(customerCount / 1000)}k</span> <br /> CUSTOMER
+              <span aria-label="7 thousand customers">{Math.round(customerCount / 1000)}k</span> <br /> Obunachilarimiz
             </motion.div>
 
             <motion.div
@@ -95,7 +95,7 @@ export default function Statistics() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)" }}
             >
-              <span aria-label="109 outlets">{Math.round(outletCount)}</span> <br /> OUTLETS
+              <span aria-label="109 outlets">{Math.round(outletCount)}</span> <br /> Filiallarimiz
             </motion.div>
 
             <motion.div
@@ -106,7 +106,7 @@ export default function Statistics() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)" }}
             >
-              <span aria-label="35 countries">{Math.round(countryCount)}</span> <br /> COUNTRY
+              <span aria-label="35 countries">{Math.round(countryCount)}</span> <br /> Shaharlar
             </motion.div>
           </div>
         </div>

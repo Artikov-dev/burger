@@ -24,7 +24,7 @@ export default function Testimonial() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Barry Henderson
+           Sultonkabirov Abdulloh
           </motion.h2>
           <motion.blockquote
             initial={{ opacity: 0 }}
@@ -33,11 +33,10 @@ export default function Testimonial() {
             viewport={{ once: true }}
           >
             <p className="text-lg md:text-2xl font-bold font-['Archivo']">
-              "The burgers at Burger Business are simply amazing! The quality of ingredients and the taste are
-              unmatched. I've been a regular customer for years and have never been disappointed."
+              "O'zbekona burgerlar shunchaki ajoyib! Ingredientlarning sifati va ta'mi tengi yo'q. Men bir necha yildirki, muntazam mijozman va hech qachon xafa bo'lmading."
             </p>
             <footer className="mt-4 text-sm md:text-base">
-              <cite>- Barry Henderson, Loyal Customer</cite>
+              <cite>- Alimov Odil, Sodiq Mijoz</cite>
             </footer>
           </motion.blockquote>
         </motion.div>
@@ -45,4 +44,3 @@ export default function Testimonial() {
     </section>
   )
 }
-

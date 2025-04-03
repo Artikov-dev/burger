@@ -22,13 +22,13 @@ export default function StructuredData() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        dayOfWeek: ["Dushanba", "Seshanba", "Chorshanba", "Payshanba", "Juma"],
         opens: "10:00",
         closes: "22:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday", "Sunday"],
+        dayOfWeek: ["Shanba", "Yakshanba"],
         opens: "11:00",
         closes: "23:00",
       },

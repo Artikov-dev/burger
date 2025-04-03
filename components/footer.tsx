@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#222] text-white py-12" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
-        Footer
+        Pastki menyu
       </h2>
       <div className="container-custom">
         <motion.div
@@ -35,9 +35,9 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-4">Burger Business</h3>
+            <h3 className="text-xl font-bold mb-4">O'zbekona Burger</h3>
             <p className="mb-4">
-              Serving delicious gourmet burgers since 2010. Visit one of our locations or order online.
+              2010-yildan beri mazali gurme burgerlar xizmatida. Bizning joylarimizga tashrif buyuring yoki onlayn buyurtma bering.
             </p>
             <div className="flex space-x-4">
               <motion.div whileHover={{ scale: 1.2, color: "#1877F2" }}>
@@ -62,9 +62,9 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-4">About</h3>
+            <h3 className="text-xl font-bold mb-4">Biz haqimizda</h3>
             <ul className="space-y-2">
-              {["History", "Our Team", "Brand Guidelines", "Terms & Conditions", "Privacy Policy"].map((item, i) => (
+              {["Tarix", "Bizning jamoa", "Brend qo'llanmalari", "Shartlar va shartlar", "Maxfiylik siyosati"].map((item, i) => (
                 <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                   <Link href="#" className="hover:underline">
                     {item}
@@ -75,9 +75,9 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-4">Services</h3>
+            <h3 className="text-xl font-bold mb-4">Xizmatlar</h3>
             <ul className="space-y-2">
-              {["How to Order", "Our Product", "Order Status", "Promo", "Payment Method"].map((item, i) => (
+              {["Qanday buyurtma berish", "Bizning mahsulot", "Buyurtma holati", "Promo", "To'lov usullari"].map((item, i) => (
                 <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                   <Link href="#" className="hover:underline">
                     {item}
@@ -88,9 +88,9 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-4">Other</h3>
+            <h3 className="text-xl font-bold mb-4">Boshqa</h3>
             <ul className="space-y-2">
-              {["Contact Us", "Help", "Privacy"].map((item, i) => (
+              {["Biz bilan bog'lanish", "Yordam", "Maxfiylik"].map((item, i) => (
                 <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                   <Link href="#" className="hover:underline">
                     {item}
@@ -107,10 +107,9 @@ export default function Footer() {
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm text-gray-400">© {new Date().getFullYear()} Burger Business. All rights reserved.</p>
+          <p className="text-sm text-gray-400">© {new Date().getFullYear()} Burger Biznesi. Barcha huquqlar himoyalangan.</p>
         </motion.div>
       </div>
     </footer>
   )
 }
-

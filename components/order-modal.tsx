@@ -36,7 +36,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
     phone: "",
     address: "",
     quantity: "1",
-    size: "medium",
+    size: "ortacha",
     specialInstructions: "",
     agreeToTerms: false,
   })
@@ -64,15 +64,15 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
     const newErrors: Record<string, string> = {}
 
     if (!formData.quantity || Number.parseInt(formData.quantity) < 1) {
-      newErrors.quantity = "Please select a valid quantity"
+      newErrors.quantity = "iltimos sonni to'g'ri kiriting"
     }
 
     if (!formData.specialInstructions) {
-      newErrors.specialInstructions = "Please enter any special instructions"
+      newErrors.specialInstructions = "iltimos shartlarni qabul qilish muhim"
     }
 
     if (!formData.size) {
-      newErrors.size = "Please select a size"
+      newErrors.size = "iltimos hajmni tanlang "
     }
 
     setErrors(newErrors)
@@ -83,25 +83,25 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
     const newErrors: Record<string, string> = {}
 
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
+      newErrors.name = "Ism  kiritish muhim"
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
+      newErrors.email = "Email kiritish muhim"
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email"
+      newErrors.email = "Iltimos emailni to'g'ri kiriting"
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required"
+      newErrors.phone = "Telefon raqami kiritish muhim"
     }
 
     if (!formData.address.trim()) {
-      newErrors.address = "Address is required"
+      newErrors.address = "Adress kiritish muhim"
     }
 
     if (!formData.agreeToTerms) {
-      newErrors.agreeToTerms = "You must agree to the terms"
+      newErrors.agreeToTerms = "iltimos shartlarni qabul qilish muhim"
     }
 
     setErrors(newErrors)
@@ -126,14 +126,14 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
     setOrderComplete(true)
 
     // Send SMS notification (simulated)
-    const smsMessage = `Thank you for your order! Your ${productName} will be delivered to your address.`
-    console.log(`SMS sent to ${formData.phone}: ${smsMessage}`)
+    const smsMessage = `Buyurtmangiz uchun rahmat! Sizning ${productName} manzilingizga yetkazib beriladi`
+    console.log(`Sms habar yuborildi ${formData.phone}: ${smsMessage}`)
 
     // Show toast after a delay to allow animation to play
     setTimeout(() => {
       toast({
-        title: "Order Placed Successfully!",
-        description: `Thank you ${formData.name}! Your ${productName} order has been placed and will be delivered to your address.`,
+        title: "Buyurtmangiz qabul qilindi",
+        description: `Raxmat ${formData.name}! sizning ${productName} manzilingizga yetkazib beriladi.`,
         duration: 5000,
       })
 
@@ -145,7 +145,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
           phone: "",
           address: "",
           quantity: "1",
-          size: "medium",
+          size: "ortacha",
           specialInstructions: "",
           agreeToTerms: false,
         })
@@ -165,7 +165,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
       phone: "",
       address: "",
       quantity: "1",
-      size: "medium",
+      size: "ortacha",
       specialInstructions: "",
       agreeToTerms: false,
     })
@@ -204,7 +204,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
                 transition={{ delay: 0.3 }}
                 className="text-2xl font-bold text-center mb-2"
               >
-                Order Confirmed!
+            Buyurtma tasdiqlandi!
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -212,17 +212,17 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
                 transition={{ delay: 0.5 }}
                 className="text-center text-gray-600"
               >
-                Thank you for your order. You will receive an SMS confirmation shortly.
+                Buyurtmangiz uchun rahmat. Tez orada SMS tasdiqlash xabari olasiz.
               </motion.p>
             </motion.div>
           ) : (
             <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold text-[#E63946]">
-                  {step === 1 ? "Order Details" : "Contact Information"}
+                  {step === 1 ? "Buyurtma Tafsilotlari" : "Aloqa Ma'lumotlari"}
                 </DialogTitle>
                 <DialogDescription>
-                  {step === 1 ? `Customize your ${productName} order` : "Please provide your delivery information"}
+                  {step === 1 ? "O‘zlashtiring ${productName} buyurtmangiz" : "Iltimos, yetkazib berish ma'lumotlaringizni taqdim eting"}
                 </DialogDescription>
               </DialogHeader>
 
@@ -235,7 +235,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
                 >
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="product" className="text-right">
-                      Product
+                    Burgerlar
                     </Label>
                     <div className="col-span-3 font-medium">
                       {productName} {productPrice && `- ${productPrice}`}
@@ -244,7 +244,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
 
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="quantity" className="text-right">
-                      Quantity
+                 Soni
                     </Label>
                     <div className="col-span-3">
                       <Select value={formData.quantity} onValueChange={(value) => handleChange("quantity", value)}>
@@ -265,7 +265,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
 
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="size" className="text-right">
-                      Size
+                      Kattaligi
                     </Label>
                     <div className="col-span-3">
                       <Select value={formData.size} onValueChange={(value) => handleChange("size", value)}>
@@ -284,7 +284,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
 
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="instructions" className="text-right">
-                      Special Instructions
+                    Maxsus ko'rsatmalar
                     </Label>
                     <Textarea
                       id="instructions"
@@ -304,7 +304,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
                 >
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="name" className="text-right">
-                      Name
+                     Ism
                     </Label>
                     <Input
                       id="name"
@@ -335,7 +335,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
 
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="phone" className="text-right">
-                      Phone
+                   Telefon raqam
                     </Label>
                     <Input
                       id="phone"
@@ -351,7 +351,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
 
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="address" className="text-right">
-                      Address
+                      Addres
                     </Label>
                     <Textarea
                       id="address"
@@ -377,7 +377,7 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
                         htmlFor="terms"
                         className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
-                        I agree to the terms and conditions
+                   Men shartlar va qoidalar bilan rozi bo'laman
                       </label>
                     </div>
                     {errors.agreeToTerms && (
@@ -390,19 +390,19 @@ export default function OrderModal({ isOpen, onClose, productName, productPrice 
               <DialogFooter className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 {step === 2 && (
                   <Button type="button" variant="outline" onClick={handleBack}>
-                    Back
+                    Orqaga
                   </Button>
                 )}
                 <div className="flex gap-2 w-full sm:w-auto">
                   <Button type="button" variant="outline" onClick={handleCancel} className="flex-1 sm:flex-none">
-                    Cancel
+                   Bekor qilish
                   </Button>
                   <Button
                     type="button"
                     onClick={handleNext}
                     className="bg-[#E63946] hover:bg-[#d12836] flex-1 sm:flex-none"
                   >
-                    {step === 1 ? "Next" : "Place Order"}
+                    {step === 1 ? "Keyingisi" : "Buyurtma berish"}
                   </Button>
                 </div>
               </DialogFooter>

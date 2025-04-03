@@ -85,7 +85,7 @@ export default function BurgerCard({
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              {description}
+              Mazali va shirin ta’mli burger! Yumshoq non orasida sersuv mol go‘shti, yangi sabzavotlar va maxsus sous bilan tayyorlangan. Burger ishqibozlari uchun ajoyib tanlov!
             </motion.p>
 
             <motion.div
@@ -93,7 +93,7 @@ export default function BurgerCard({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: reverse ? 0.95 : 1.05 }} //
               whileTap={{ scale: 0.95 }}
             >
               <Button
@@ -101,9 +101,10 @@ export default function BurgerCard({
                 className={`${buttonColor} rounded-full py-4 md:py-6 px-10 md:px-16 text-lg md:text-xl lg:text-2xl font-bold uppercase`}
                 aria-label={`Order ${title} now`}
               >
-                ORDER NOW
+                BUYURTMA BERISH
               </Button>
             </motion.div>
+
           </div>
         </motion.div>
       </div>

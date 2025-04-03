@@ -15,38 +15,38 @@ export default function ChefsCarousel() {
   const chefs: Chef[] = [
     {
       id: 1,
-      name: "AIDEN HUNTER",
-      role: "Founder",
+      name: "Tolqinov  Botir",
+      role: "Oshpaz Yordamchisi",
       image: "/jigaa.png",
     },
     {
       id: 2,
-      name: "ETHEL RAMSEY",
-      role: "Co-Founder",
+      name: "Abdusalomova  Mashura",
+      role: "Girgitton",
       image: "/jiga-qizi.png",
     },
     {
       id: 3,
-      name: "FANNIE STEWART",
-      role: "Co-Founder",
+      name: "Nodira Kurbanova",
+      role: "Girgitton",
       image: "/jiga-qizi.png",
     },
     {
       id: 4,
-      name: "GORDON RAMSAY",
-      role: "Head Chef",
+      name: "Isoyeva  Sultonposhsho",
+      role: "chef",
       image: "/jiga-qizi.png",
     },
     {
       id: 5,
-      name: "JULIA CHILD",
-      role: "Executive Chef",
+      name: "Tolqinova  Aliya",
+      role: "Oshpaz yordamchisi",
       image: "/jiga-qizi.png",
     },
     {
       id: 6,
-      name: "AIDEN HUNTER",
-      role: "Founder",
+      name: "Xalilov Ibrohim",
+      role: "Manajer",  
       image: "/jigaa.png",
     },
   ]
@@ -64,12 +64,11 @@ export default function ChefsCarousel() {
           id="chefs-heading"
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F54B3B] mb-5 text-center"
         >
-          Our Chefs
+          Oshpazlarimiz haqida
         </h2>
 
         <p className="text-lg md:text-xl text-[#F54B3B] mb-14 max-w-[464px] px-4 mx-auto text-center">
-          Meet the talented culinary experts behind our delicious burgers. Our chefs bring years of experience and
-          passion to every dish.
+          Bizning mazali burgerlarimizni tayyorlaydigan iqtidorli oshpazlarimiz bilan tanishing. Bizning oshpazlarimiz har bir taomga yillar davomida to'plangan tajriba va ishtiyoqni olib keladi.
         </p>
 
         <Carousel
@@ -90,7 +89,7 @@ export default function ChefsCarousel() {
                         alt={`${chef.name} - ${chef.role} at Burger Business`}
                         className="w-[180px] h-[180px] rounded-full object-cover hover:scale-105 transition-transform duration-300"
                       />
-                      <h3 className="text-2xl md:text-3xl font-bold text-[#F54B3B] uppercase">
+                      <h3 className="text-2xl md:text-3xl font-bold text-[#F54B3B] uppercase text-center">
                         {chef.name}
                       </h3>
                       <p className="text-sm md:text-base font-semibold text-[#F54B3B] mb-0">
